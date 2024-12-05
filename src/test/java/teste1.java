@@ -33,5 +33,10 @@ public class teste1 {
         for(Seller obj : list){
             System.out.println(obj);
         }
+        System.out.println("\n\n\n=== Test number 3 Seller FindAll ===");
+        list = sellerDao.findAll();
+        for(Seller obj : list){
+            System.out.println(obj);
+        }
     }
 }
