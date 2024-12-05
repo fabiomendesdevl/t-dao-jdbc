@@ -6,6 +6,7 @@ import model.entities.Seller;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Scanner;
 
 public class teste1 {
@@ -22,7 +23,15 @@ public class teste1 {
         SellerDao sellerDao  = DaoFactory.createSellerDao();
         System.out.println("=== Test number 1 FindById ===");
         Seller seller = sellerDao.findById(3);
-
         System.out.println(seller);
+
+
+        System.out.println("\n\n\n=== Test number 2 FindByDepartment ===");
+        Department department= new Department(2, null);
+        List<Seller> list = sellerDao.findByDepartment(department);
+
+        for(Seller obj : list){
+            System.out.println(obj);
+        }
     }
 }
