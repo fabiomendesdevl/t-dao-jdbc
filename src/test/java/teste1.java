@@ -38,5 +38,10 @@ public class teste1 {
         for(Seller obj : list){
             System.out.println(obj);
         }
+
+        System.out.println("\n\n\n=== Test number 4 Seller Insert ===");
+        Seller newSeller = new Seller(null, "Greg", "gred@gmail.com", new Date(), 4000.0, department);
+        sellerDao.insert(newSeller);
+        System.out.println("new seller inserted" + newSeller.getId());
     }
 }
